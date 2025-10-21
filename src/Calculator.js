@@ -256,7 +256,7 @@ export default function Calculator() {
             </p>
             
             <p className="mb-2">
-              <strong>Status:</strong>{" "}
+              <strong>status:</strong>{" "}
               <span
                 className={`badge ${
                   i.status === "Paid" ? "bg-white text-success" : "bg-warning"
