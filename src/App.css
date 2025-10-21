@@ -1,0 +1,225 @@
+/* General tab styling */
+.custom-tabs .nav-link {
+  color: #555;
+  font-weight: 500;
+  border-radius: 8px;
+  margin-right: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.custom-tabs .nav-link:hover {
+  background-color: #f1f1f1;
+}
+
+/* Active tab (highlighted one) */
+.custom-tabs .nav-link.active {
+  background-color: #007bff; /* Blue highlight */
+  color: white !important;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0, 123, 255, 0.4);
+}
+
+
+
+
+
+
+.electronics-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background-color: #f3f4f6;
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.product-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-body h3 {
+  font-size: 18px;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.card-body p {
+  color: #555;
+  font-weight: 500;
+}
+
+
+
+/* //navbar// */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: #212529;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius:0 25PX 25px 0PX ;
+}
+
+.sidebar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.nav-link {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 1.4rem;
+  transition: 0.2s;
+}
+
+.nav-link:hover {
+  color: black;
+  transform: translateX(1px);
+  background-color: rgb(232, 230, 228);
+}
+
+.nav-livk {
+  background-color: #212529;
+}
+
+
+
+
+.electronics-wrapper {
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.search-input {
+  padding: 10px;
+  width: 60%;
+  margin-bottom: 25px;
+  font-size: 16px;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+.search-input:focus {
+  border-color: #0056b3;
+}
+
+.electronics-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+}
+
+.card {
+  width: 230px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.product-img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-body {
+  padding: 5px;
+}
+
+.no-result {
+  font-size: 18px;
+  color: red;
+  margin-top: 20px;
+}
+
+/* ✅ Layout adjustments */
+.app-layout {
+  display: flex;
+  flex-direction: row;
+}
+
+.content-area {
+  flex: 1;
+  margin-left: 240px;
+  padding: 20px;
+  transition: margin 0.3s ease;
+}
+
+/* ✅ For tablets and phones */
+@media (max-width: 992px) {
+  .content-area {
+    margin-left: 0;
+  }
+}
+
+/* ✅ Cards layout (Electronics page etc.) */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+
+
+
+
