@@ -117,20 +117,7 @@ export default function ProductFormModal({
     </Form.Group>
   </Col>
 
-  <Col md={4}>
-    <Form.Group>
-      <Form.Label>Discount</Form.Label>
-      <Form.Control
-        type="number"
-        value={form.discount || ""}
-        onChange={(e) => setForm({ ...form, discount: e.target.value })}
-      />
-    </Form.Group>
-  </Col>
-</Row>
-
-<Row className="mb-3">
-  <Col md={4}>
+   <Col md={4}>
     <Form.Group>
       <Form.Label>Quantity</Form.Label>
       <Form.Control
@@ -141,6 +128,10 @@ export default function ProductFormModal({
     </Form.Group>
   </Col>
 
+</Row>
+
+<Row className="mb-3">
+ 
   <Col md={4}>
     <Form.Group>
       <Form.Label>Warranty</Form.Label>
@@ -151,22 +142,8 @@ export default function ProductFormModal({
       />
     </Form.Group>
   </Col>
-
-  <Col md={4}>
-    <Form.Group>
-      <Form.Label>Description</Form.Label>
-      <Form.Control
-        as="textarea"
-        rows={1}
-        value={form.description || ""}
-        onChange={(e) => setForm({ ...form, description: e.target.value })}
-      />
-    </Form.Group>
-  </Col>
-</Row>
-
-          {/* Image Upload */}
-          <Form.Group className="mb-3">
+<Col md={8}>
+   <Form.Group className="mb-3">
             <Form.Label>Product Image</Form.Label>
             <Form.Control
               type="file"
@@ -193,6 +170,11 @@ export default function ProductFormModal({
               />
             )}
           </Form.Group>
+          </Col>
+</Row>
+
+          {/* Image Upload */}
+          
         </Form>
       </Modal.Body>
 

@@ -4,6 +4,7 @@ import { Button, Form, Table } from "react-bootstrap";
 
 export default function StockManager() {
   const { products, setProducts } = useContext(AppContext);
+  const [search, setSearch] = useState("");
   const [form, setForm] = useState({
     product: "",
     size: "",
@@ -22,7 +23,6 @@ export default function StockManager() {
       return;
     }
 
-    // agar product pehle se exist karta hai to update qty
     const existing = products.find((p) => p.name === form.product);
     if (existing) {
       setProducts(
@@ -57,7 +57,6 @@ export default function StockManager() {
     });
   };
 
-  // Sell function
   const handleSell = (name) => {
     setProducts(
       products.map((p) =>
@@ -72,67 +71,26 @@ export default function StockManager() {
     setProducts(products.filter((p) => p.id !== id));
   };
 
+  // ✅ Filter products according to search
+  const filteredProducts = products.filter(
+    (p) =>
+      p.name.toLowerCase().includes(search.toLowerCase()) ||
+      p.brand.toLowerCase().includes(search.toLowerCase()) ||
+      p.color.toLowerCase().includes(search.toLowerCase()) ||
+      p.size.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
     <div className="container mt-4">
-      <h3>📦 Stock Manager</h3>
+      <h2>Stock Manager</h2>
 
-      <Form className="row g-3 mt-2">
-        <div className="col-md-3">
-          <Form.Control
-            name="product"
-            value={form.product}
-            onChange={handleChange}
-            placeholder="Product Name"
-          />
-        </div>
-        <div className="col-md-2">
-          <Form.Control
-            name="size"
-            value={form.size}
-            onChange={handleChange}
-            placeholder="Size"
-          />
-        </div>
-        <div className="col-md-2">
-          <Form.Control
-            name="color"
-            value={form.color}
-            onChange={handleChange}
-            placeholder="Color"
-          />
-        </div>
-        <div className="col-md-2">
-          <Form.Control
-            name="brand"
-            value={form.brand}
-            onChange={handleChange}
-            placeholder="Brand"
-          />
-        </div>
-        <div className="col-md-1">
-          <Form.Control
-            type="number"
-            name="quantity"
-            value={form.quantity}
-            onChange={handleChange}
-            placeholder="Qty"
-          />
-        </div>
-        <div className="col-md-2">
-          <Form.Control
-            type="number"
-            name="price"
-            value={form.price}
-            onChange={handleChange}
-            placeholder="Price"
-          />
-        </div>
-        <div className="col-md-2">
-          <Button className="w-100" onClick={handleAdd}>
-            ➕ Add Stock
-          </Button>
-        </div>
-      </Form>
+      <Form.Control
+        type="text"
+        placeholder="Search by name, brand, color, or size..."
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        className="mb-4"
+      />
 
       <Table striped bordered hover className="mt-4">
         <thead>
@@ -149,7 +107,7 @@ export default function StockManager() {
           </tr>
         </thead>
         <tbody>
-          {products.map((p, i) => (
+          {filteredProducts.map((p, i) => (
             <tr key={p.id}>
               <td>{i + 1}</td>
               <td>{p.name}</td>

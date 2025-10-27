@@ -102,7 +102,7 @@
 .nav-link {
   color: #bbb;
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   transition: 0.2s;
 }
 
@@ -219,6 +219,31 @@
   transform: translateY(-5px);
 }
 
+
+
+
+
+.footer-bar {
+  height: 25px;
+  background:  rgb(26, 144, 184);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  
+}
+
+/* .footer-bar small {
+  font-size: 0.9rem;
+  letter-spacing: 0.3px;
+} */
+
+@media (max-width: 586px) {
+  .footer-bar small {
+    font-size: 0.8rem;
+  }
+}
+        
 
 
 

@@ -38,17 +38,13 @@ export default function Electronic() {
                 />
                 <Card.Body>
                   <Card.Title>{p.name}</Card.Title>
-                  <Card.Subtitle className="text-muted mb-2">
-                    {p.category}
-                  </Card.Subtitle>
+                  
                   <Card.Text>
                     <strong>Price:</strong> ${p.price} <br />
                     {p.oldPrice && (
                       <>
-                        <strong>Old Price:</strong>{" "}
-                        <span className="text-decoration-line-through text-danger">
-                          ${p.oldPrice}
-                        </span>
+                       
+                      
                       </>
                     )}
                   </Card.Text>

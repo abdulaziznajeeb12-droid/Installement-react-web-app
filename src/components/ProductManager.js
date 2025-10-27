@@ -16,10 +16,10 @@ export default function ProductManager() {
     size: "",
     price: "",
     oldPrice: "",
-    discount: "",
+  
     quantity: "",
     warranty: "",
-    description: "",
+    
     img: "",
     category: "",
     status: "Active",
@@ -49,10 +49,10 @@ export default function ProductManager() {
       size: "",
       price: "",
       oldPrice: "",
-      discount: "",
+    
       quantity: "",
       warranty: "",
-      description: "",
+    
       img: "",
       category: "",
       status: "Active",

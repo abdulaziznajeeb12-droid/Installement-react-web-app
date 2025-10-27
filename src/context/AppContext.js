@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 
 // Context creation
 export const AppContext = createContext();
@@ -10,6 +10,15 @@ export const AppProvider = ({ children }) => {
   const [categories, setCategories] = useState([]);
   const [users, setUsers] = useState([]);
 
+  // ✅ Add these lines
+  const [sales, setSales] = useState(() => {
+    return JSON.parse(localStorage.getItem("sales")) || [];
+  });
+
+  // ✅ Keep sales synced with localStorage
+  useEffect(() => {
+    localStorage.setItem("sales", JSON.stringify(sales));
+  }, [sales]);
 
   return (
     <AppContext.Provider
@@ -20,8 +29,10 @@ export const AppProvider = ({ children }) => {
         setCustomers,
         categories,
         setCategories,
-        users, setUsers,
-
+        users,
+        setUsers,
+        sales,        // ✅ Added
+        setSales,     // ✅ Added
       }}
     >
       {children}

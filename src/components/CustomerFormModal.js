@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Modal, Form, Button } from "react-bootstrap";
 
@@ -38,6 +37,16 @@ export default function CustomerFormModal({ show, onHide, form, setForm, onSave,
               placeholder="Enter phone number"
               value={form.phone || ""}
               onChange={(e) => setForm({ ...form, phone: e.target.value })}
+            />
+          </Form.Group>
+
+          <Form.Group className="mb-3">
+            <Form.Label>Contact</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Enter alternate contact"
+              value={form.contact || ""}
+              onChange={(e) => setForm({ ...form, contact: e.target.value })}
             />
           </Form.Group>
 
