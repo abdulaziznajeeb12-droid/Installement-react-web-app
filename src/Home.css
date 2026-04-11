@@ -1,0 +1,44 @@
+/* ========================
+   🏠 DASHBOARD (HOME PAGE)
+======================== */
+.dashboard-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0d1117, #6e9dde);
+  color: #f9fafb;
+  padding: 20px;
+}
+
+/* Dashboard Cards */
+.dash-card {
+  border: none;
+  color: #fff;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.dash-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* Gradients for Cards */
+.gradient-1 {
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+}
+.gradient-2 {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+.gradient-3 {
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+}
+.gradient-4 {
+  background: linear-gradient(135deg, #f7971e, #ffd200);
+}
+
+/* Chart container */
+.chart-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+}

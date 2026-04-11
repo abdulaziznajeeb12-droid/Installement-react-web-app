@@ -27,11 +27,13 @@ export default function CategoryManager() {
 
   return (
     <div className="container mt-4">
-      <div className="d-flex justify-content-between align-items-center mb-3">
-        <h4>📂 Category Manager</h4>
+    
+        {/* <h4>📂 Category Manager</h4> */}
+        <div className="d-flex justify-content-end mb-3">
         <Button variant="primary" onClick={handleAdd}>
           + Add Category
         </Button>
+        
       </div>
 
       {categories.length === 0 ? (

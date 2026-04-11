@@ -42,8 +42,8 @@ function App() {
                       <Route path="/Expense" element={<Expense />} />
                       <Route path="/Calculator" element={<Calculator />} />
                       <Route path="/components/SalesHistory" element={<SalesHistory />} />
-                      <Route path="/components/ProductManager" element={<ProductManager />} />
-                      <Route path="/components/CustomerManager" element={<CustomerManager />} />
+                      {/* <Route path="/components/ProductManager" element={<ProductManager />} />
+                      <Route path="/components/CustomerManager" element={<CustomerManager />} /> */}
                       <Route path="/components/StockManager" element={<StockManager />} />
                       
                       <Route path="/logout" element={<Logout />} />

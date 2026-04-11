@@ -81,7 +81,7 @@ export default function StockManager() {
   );
 
   return (
-    <div className="container mt-4">
+    <div className="container ">
       <h2>Stock Manager</h2>
 
       <Form.Control
@@ -137,6 +137,7 @@ export default function StockManager() {
           ))}
         </tbody>
       </Table>
+      <p>.</p>
     </div>
   );
 }

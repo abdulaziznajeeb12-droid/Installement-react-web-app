@@ -42,7 +42,8 @@ export default function CustomerManager() {
   };
 
   return (
-    <div>
+    <div className="container ">
+      {/* <h2>Customer</h2> */}
       <div className="d-flex justify-content-end mb-3">
         <Button onClick={() => setShowForm(!showForm)}>
           {showForm ? "Close Form" : "+ Add Customer"}
@@ -120,6 +121,7 @@ export default function CustomerManager() {
           ))}
         </tbody>
       </Table>
+      <p>.</p>
     </div>
   );
 }

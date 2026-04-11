@@ -1,0 +1,77 @@
+/* ========================
+   ⚙️ CONFIGURATION PAGE
+======================== */
+.config-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0d1117, #6e9dde);
+  color: #f9fafb;
+  padding: 40px;
+}
+
+/* Header Section */
+.config-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.config-header h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.subtitle {
+  color: #d0d0d0;
+  font-size: 1rem;
+}
+
+/* Main Card (Tabs Wrapper) */
+.config-card {
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  padding: 20px 25px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Tabs Styles */
+.custom-tabs .nav-link {
+  color: #dcdcdc;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  padding: 10px 15px;
+}
+
+.custom-tabs .nav-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* Active Tab */
+.custom-tabs .nav-link.active {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+  font-weight: 600;
+}
+
+/* Tab Content */
+.tab-content {
+  margin-top: 15px;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .config-container {
+    padding: 20px;
+  }
+
+  .config-card {
+    padding: 15px;
+  }
+}

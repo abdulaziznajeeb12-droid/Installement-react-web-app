@@ -87,8 +87,10 @@ export default function ProductManager() {
   };
 
   return (
-    <div>
+    <div className="container ">
       {/* Add Button */}
+            {/* <h2>Product</h2> */}
+
       <div className="d-flex justify-content-end mb-3">
         <Button onClick={() => setShowForm(!showForm)} variant="primary">
           {showForm ? "Close Form" : "+ Add Product"}
